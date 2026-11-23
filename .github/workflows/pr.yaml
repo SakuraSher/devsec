@@ -29,4 +29,14 @@ jobs:
            run: |
              echo "Scanning directory: $(realpath ./part1)"
              checkov -d ./part1 --framework terraform --quiet
+   
+   docker-scan:
+      runs-on: ubuntu-latest
+      steps:
+         - name: check out code
+           uses: actions/checkout@v4
+         - name: hadolint scan
+           uses: hadolint/hadolint-action@v2.10.0
+           with:
+              dockerfile: ./part1/Dockerfile
        
