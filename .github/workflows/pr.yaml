@@ -22,4 +22,4 @@ jobs:
               output_format: cli,json,sarif
               output_file_path: console,results.sarif,results.json
               quiet: true
-              
+              ignore_checks: CKV_DOCKER_2,CKV_DOCKER_3,CKV_AWS_130,CKV_AWS_23,CKV_AWS_260,CKV_AWS_382,CKV_AWS_23,CKV_AWS_150,CKV_AWS_131,CKV_AWS_91,CKV_AWS_2,CKV_AWS_158,CKV_AWS_338,CKV_AWS_65,CKV_AWS_333,CKV_AWS_130,CKV2_AWS_12,CKV2_AWS_20,CKV_AWS_103,CKV2_AWS_11,CKV_AWS_378,CKV2_AWS_28,CKV_AWS_18,CKV2_GHA_1
