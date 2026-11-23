@@ -17,8 +17,8 @@ jobs:
          - name: Run checkov Scan
            uses: bridgecrewio/checkov-action@v2
            with:
-              directory: ./part2
-              frameworks: terraform
+              directory: ./part1
+              framework: terraform
               output_format: cli,json,sarif
               output_file_path: console,results.sarif,results.json
               quiet: true
