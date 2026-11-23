@@ -35,7 +35,7 @@ jobs:
          - name: Run TFLint
            run: |
                tflint --init
-               tflint --recursive ./part1
+               tflint --recursive --chdir=./part1
            
    
    docker-scan:
