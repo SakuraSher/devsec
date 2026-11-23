@@ -5,6 +5,9 @@ on:
          - main
       paths:
             - 'part2/**'
+   workflow_dispatch:
+
+      
 jobs:
    infra-scan:
       runs-on: ubuntu-latest
