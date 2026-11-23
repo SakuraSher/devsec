@@ -36,7 +36,7 @@ jobs:
          - name: check out code
            uses: actions/checkout@v4
          - name: hadolint scan
-           uses: hadolint/hadolint-action@v2.10.0
+           uses: hadolint/hadolint-action@v3.3.0
            with:
               dockerfile: ./part1/Dockerfile
        
