@@ -34,7 +34,7 @@ jobs:
            
          - name: Run TFLint
            run: |
-               tfint --init
+               tflint --init
                tflint --recursive ./part1
            
    
