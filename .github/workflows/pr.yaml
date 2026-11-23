@@ -29,6 +29,14 @@ jobs:
            run: |
              echo "Scanning directory: $(realpath ./part1)"
              checkov -d ./part1 --framework terraform --quiet
+         - name: Setup TF Lint
+           uses: terraform-linters/setup-tflint@v6
+           
+         - name: Run TFLint
+           run: |
+               tfint --init
+               tflint --recursive ./part1
+           
    
    docker-scan:
       runs-on: ubuntu-latest
