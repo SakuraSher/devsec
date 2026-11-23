@@ -14,6 +14,8 @@ jobs:
       steps:
          - name: check out code
            uses: actions/checkout@v4
+         - name: check current directory
+           run: pwd
          - name: Run checkov Scan
            uses: bridgecrewio/checkov-action@v2
            with:
