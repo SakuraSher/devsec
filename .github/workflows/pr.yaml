@@ -21,4 +21,5 @@ jobs:
               frameworks: terraform
               output_format: cli,json,sarif
               output_file_path: console,results.sarif,results.json
+              quiet: true
             
