@@ -3,7 +3,18 @@ on:
    pull_request:
       branches:
          - main
+      paths:
+            - 'part2/**'
 jobs:
-   build:
+   infra-scan:
       runs-on: ubuntu-latest
       steps:
+         - name: check out code
+           uses: actions/checkout@v4
+         - name: Run checkov Scan
+           uses: bridgecrewio/checkov-action@v2
+           with:
+              directory: part2
+              output_format: cli,json,sarif
+              output_file_path: console,results.sarif,results.json
+         
